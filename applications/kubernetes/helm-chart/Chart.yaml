@@ -1,6 +1,7 @@
 apiVersion: v2
-name: helm-chart
-description: A Helm chart for Kubernetes
+name: qr-application helm chart 
+description: A Helm chart for a qr generator application 
+
 
 # A chart can be either an 'application' or a 'library' chart.
 #

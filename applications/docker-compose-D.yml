@@ -82,22 +82,21 @@ services:
   nginx:
       image: nginx:latest
       container_name: qr_nginx
-      # build: 
-      #   context: nginx
-      #   dockerfile: Dockerfile
       ports:
       - 80:80 
-      networks:
-        - qr_network
       volumes:  
         - ./nginx/nginx-tls.conf:/etc/nginx/conf.d/default.conf:z
         - type: bind
           source: ./nginx/ssl 
           target : /etc/nginx/ssl
+      networks:
+        - qr_network
+
+volumes:
+  minio_data:
+
 networks:
   qr_network:
     driver: bridge
   
-volumes:
-  minio_data:
   
