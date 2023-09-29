@@ -1,5 +1,8 @@
 version: '3.8'
 
+### comparing to docker-compose-C.yml , we've configure HTTPs traffic in nginx ###
+
+
 #The idea : replication each app through different ports
 
 #Note : regarding storage volumes , we still using one host volume (one-single-point of failure)

@@ -10,8 +10,7 @@ services:
     ports: 
       - 3000:3000
     
-    # depends_on:
-    #   - qr_python_code
+   
     env_file:
       - .env
 
