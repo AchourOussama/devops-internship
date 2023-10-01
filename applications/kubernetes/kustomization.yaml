@@ -10,5 +10,6 @@ resources:
   - backend.yml
   - backend-ingress.yml
   - python.yml
-  - minio-server.yml
-  - minio-ingress.yml
+  # minio server isn't well configured on k8s 
+  #- minio-server.yml
+  # - minio-ingress.yml

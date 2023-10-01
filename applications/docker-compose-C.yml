@@ -45,10 +45,6 @@ services:
 #front app
   qr_front:
     image: oussachour/qr_frontend:latest
-    #image: front:latest
-    build: 
-      context: website
-      dockerfile: Dockerfile
     
     restart: always
     deploy:
@@ -59,6 +55,7 @@ services:
       - qr_network
     volumes:
       - minio_data:/qr-frontend/assets/data:ro
+      - ./configs/app-config.json:/qr-frontend/assets/configs/app-config.json:ro
     env_file:
     - .env
 #minio : 
