@@ -12,7 +12,7 @@ services:
     
    
     env_file:
-      - .env
+      - ./configs/.env
 
 
   qr_python_code:
@@ -28,7 +28,7 @@ services:
     volumes:
       - generated_qr:/usr/src/generated_qr:z
     env_file:
-      - .env
+      - ./configs/.env
     
 
   qr_front:
@@ -41,7 +41,7 @@ services:
       ports: 
       - 80:80
       env_file:
-      - .env
+      - ./configs/.env
       volumes:
       - generated_qr:/qr-frontend/assets/data:ro    
 networks:

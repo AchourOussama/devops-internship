@@ -16,7 +16,7 @@ services:
     networks:
       - qr_network
     env_file:
-      - .env
+      - ./configs/.env
     
 
   qr_python_code:

@@ -22,7 +22,7 @@ services:
     networks:
       - qr_network
     env_file:
-      - .env
+      - ./configs/.env
 
 #python app
 
@@ -40,7 +40,7 @@ services:
     networks:
       - qr_network
     env_file:
-      - .env
+      - ./configs/.env
     
 #front app
   qr_front:
@@ -57,7 +57,7 @@ services:
       - minio_data:/qr-frontend/assets/data:ro
       - ./configs/app-config.json:/qr-frontend/assets/configs/app-config.json:ro
     env_file:
-    - .env
+    - ./configs/.env
 #minio : 
   minio:
     image: minio/minio:latest
@@ -74,7 +74,7 @@ services:
     networks:
       - qr_network
     env_file:
-      - .env
+      - ./configs/.env
     
 #nginx 
   nginx:
