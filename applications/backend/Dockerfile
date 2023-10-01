@@ -1,4 +1,4 @@
-#importng the node (which also includes to package manager : npm)
+#importng the node (which also includes the package manager: npm)
 FROM node:slim
 
 #creating app directory
