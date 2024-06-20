@@ -30,7 +30,7 @@ My final deliverable conists of the:
 
 # Application overview: 
 ## Archiecture: 
-![alt text](./markdowm-images/image16.png)
+![alt text](./markdowm-images/architecture.png)
 Here is a brief description of the application stack :
 - Application : NodeJS + Python : creates QR codes from a string input
 - Frontend : Angular : Web interface where i give string inputs and see the displayed QR outputs.
@@ -38,4 +38,4 @@ Here is a brief description of the application stack :
 - Storage: Minio storage : stores QR images
 
 ## Demo: 
-![alt text](./markdowm-images/image18.png)
+![alt text](./markdowm-images/demo.png)

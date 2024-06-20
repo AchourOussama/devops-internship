@@ -5,6 +5,7 @@
 applications/website/src/assets/configs/
 **/.env
 applications/builds/
+markdown-images
 
 # compiled output
 **/dist
