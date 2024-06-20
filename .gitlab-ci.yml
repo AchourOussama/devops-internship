@@ -1,38 +1,16 @@
-#services:
-#    - name: docker:24.0.3-dind
-#      alias: dockerd
-#
 variables:
   CLUSTER_NAME: prod-qr-app
   TRIGGER_PIPELINE:  "false"
 stages :
-  - test
   - build
   - deploy
 
 
-
-
-#find-docker-port:
-#  tags:
-#    - t-009-prod
-#  image: alpine
-#  services:
-#    - dockerd
-#  script:
-#    - apt-get update
-#    - apt-get install nmap
-#    - nmap -sT -p- docker
-#
 build:
   stage: build
-#  image: docker:24.0.3-cli
-#  services:  
-#    - dockerd
   tags:
     - t-009-prod
   before_script:
-
     - ./ci-scripts/dockerhub-login.sh 
   script: 
     - chmod ugo+rwx ./ci-scripts/build.sh 
@@ -42,6 +20,7 @@ build:
       - ./applications/backend/
       - ./applications/website/
       - ./applications/qr/
+  
 deploy :
   stage: deploy 
   rules: 
@@ -57,4 +36,5 @@ deploy :
     - chmod ugo+rwx ./applications/kubernetes/deploy.sh
     - ./applications/kubernetes/deploy.sh
       
+
 

@@ -20,7 +20,7 @@ services:
   qr_python_code:
 
     image: oussachour/qr_python_code:latest
-    restart: always
+    #restart: always
     deploy:
       replicas: 2 
     ports: 
@@ -37,7 +37,7 @@ services:
   qr_front:
     image: oussachour/qr_frontend:latest
     
-    restart: always
+    #restart: always
     deploy:
       replicas: 2
     ports: 

@@ -1,0 +1,5 @@
+{   
+    "backendUrl":"http://localhost:80/access",
+    "_comment" : "to think of : making the request be sent to the reverse proxy" 
+      
+}
