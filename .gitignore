@@ -2,7 +2,7 @@
 **/.idea
 **/node_modules
 **/generated_qr
-applications/website/src/assets/configs/app-config.json
+applications/website/src/assets/configs/
 **/.env
 applications/builds/
 
