@@ -17,9 +17,9 @@ build:
     - ./ci-scripts/build.sh
   only: 
     changes:
-      - ./applications/backend/
-      - ./applications/website/
-      - ./applications/qr/
+      - ../applications/backend/
+      - ../applications/website/
+      - ../applications/qr/
   
 deploy :
   stage: deploy 
@@ -29,12 +29,12 @@ deploy :
   tags: 
     - t-009-prod
   before_script:
-    - ./applications/kubernetes/init-k3d-cluster.sh $CLUSTER_NAME
-    - chmod ugo+rwx ./applications/kubernetes/secrets/sealingSecrets.sh
-    - ./applications/kubernetes/secrets/sealingSecrets.sh 
+    - ../applications/kubernetes/init-k3d-cluster.sh $CLUSTER_NAME
+    - chmod ugo+rwx ../applications/kubernetes/secrets/sealingSecrets.sh
+    - ../applications/kubernetes/secrets/sealingSecrets.sh 
   script: 
-    - chmod ugo+rwx ./applications/kubernetes/deploy.sh
-    - ./applications/kubernetes/deploy.sh
+    - chmod ugo+rwx ../applications/kubernetes/deploy.sh
+    - ../applications/kubernetes/deploy.sh
       
 
 

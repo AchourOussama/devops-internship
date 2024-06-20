@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 chmod u+x ./ci-scripts/build.sh 
 
-cd ./applications
+cd ../applications
 echo "troubelshooting:before build"
 docker-compose -f docker-compose.yml build 
 echo "troubelshooting:build successful"
